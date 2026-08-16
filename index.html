@@ -3,463 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Hakim Trend — ট্রেন্ডের খবর, সবার আগে</title>
-
-  <meta name="description" content="Hakim Trend — ট্রেন্ডিং খবর, News, Sports, Entertainment ও Technology-এর আপডেট।">
+  <title>আমাদের ওয়েবসাইট</title>
 
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
-      font-family: Arial, "Noto Sans Bengali", sans-serif;
-      background: #f4f5f7;
-      color: #171717;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
     }
 
     header {
-      background: #111;
+      background: #111827;
       color: white;
       text-align: center;
-      padding: 24px 15px;
+      padding: 35px 15px;
     }
 
-    .logo {
-      font-size: 32px;
-      font-weight: bold;
+    header h1 {
+      margin: 0 0 10px;
     }
 
-    .tagline {
-      color: #ddd;
-      margin-top: 5px;
-    }
-
-    nav {
-      background: white;
-      display: flex;
-      overflow-x: auto;
-      white-space: nowrap;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav button {
-      border: 0;
-      background: white;
-      padding: 14px 16px;
-      font-size: 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    nav button:hover {
-      background: #eee;
-    }
-
-    .search-area {
-      background: white;
-      padding: 15px;
-    }
-
-    .search-box {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 16px;
-      outline: none;
+    header p {
+      margin: 0;
     }
 
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 18px 15px;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
-    .section-title {
-      margin: 20px 0 12px;
-      font-size: 24px;
-    }
-
-    .hero {
+    .card {
       background: white;
       padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,.08);
-    }
-
-    .hero h2 {
-      margin-bottom: 8px;
-    }
-
-    .hero p {
-      color: #666;
-      line-height: 1.6;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .category {
-      background: white;
-      padding: 17px;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0,0,0,.07);
-    }
-
-    .articles {
-      display: grid;
-      gap: 15px;
-    }
-
-    .article {
-      background: white;
-      padding: 20px;
+      margin-bottom: 20px;
       border-radius: 14px;
-      box-shadow: 0 3px 10px rgba(0,0,0,.07);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
-    .article .category-name {
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 7px;
-      color: #666;
+    .card h2 {
+      margin-top: 0;
     }
 
-    .article h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-    }
-
-    .article p {
-      color: #666;
-      line-height: 1.6;
-    }
-
-    .article-actions {
-      margin-top: 15px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .article-actions button {
-      border: 0;
-      background: #111;
+    .button {
+      display: inline-block;
+      background: #2563eb;
       color: white;
-      padding: 9px 13px;
-      border-radius: 7px;
-      cursor: pointer;
-    }
-
-    .no-result {
-      display: none;
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      color: #666;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 10px;
     }
 
     footer {
-      background: #111;
-      color: white;
       text-align: center;
-      padding: 28px 15px;
+      padding: 25px;
+      background: #111827;
+      color: white;
       margin-top: 30px;
-    }
-
-    footer p {
-      color: #ddd;
-      margin: 5px;
-    }
-
-    @media (max-width: 500px) {
-      .logo {
-        font-size: 28px;
-      }
-
-      .categories {
-        grid-template-columns: repeat(2, 1fr);
-      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🔥 Hakim Trend</div>
-  <div class="tagline">ট্রেন্ডের খবর, সবার আগে</div>
-</header>
+  <header>
+    <h1>আমাদের ওয়েবসাইট</h1>
+    <p>তথ্য ও সুন্দর আর্টিকেলের একটি সহজ ওয়েবসাইট</p>
+  </header>
 
-<nav>
-  <button onclick="showAll()">Home</button>
-  <button onclick="filterArticles('Trending')">🔥 Trending</button>
-  <button onclick="filterArticles('News')">📰 News</button>
-  <button onclick="filterArticles('Sports')">⚽ Sports</button>
-  <button onclick="filterArticles('Entertainment')">🎬 Entertainment</button>
-  <button onclick="filterArticles('Technology')">📱 Technology</button>
-</nav>
+  <div class="container">
 
-<div class="search-area">
-  <div class="search-box">
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="🔍 খবর বা বিষয় খুঁজুন..."
-      onkeyup="searchArticles()"
-    >
-  </div>
-</div>
-
-<main class="container">
-
-  <section>
-    <h2 class="section-title">🔥 Trending</h2>
-
-    <div class="hero">
-      <h2>Hakim Trend-এ স্বাগতম 👋</h2>
+    <div class="card">
+      <h2>স্বাগতম 👋</h2>
       <p>
-        ট্রেন্ডিং বিষয়, খবর, খেলাধুলা, বিনোদন ও
-        প্রযুক্তির আপডেট এক জায়গায়।
+        আমাদের ওয়েবসাইটে আপনাকে স্বাগতম।
+        এখানে আপনি বিভিন্ন ধরনের তথ্য ও আর্টিকেল পড়তে পারবেন।
       </p>
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">📂 Categories</h2>
+    <div class="card">
+      <h2>আমাদের প্রথম আর্টিকেল</h2>
+      <p>
+        নতুন আর্টিকেলটি দেখতে নিচের বাটনে ক্লিক করুন।
+      </p>
 
-    <div class="categories">
-
-      <div class="category" onclick="filterArticles('Trending')">
-        🔥 Trending
-      </div>
-
-      <div class="category" onclick="filterArticles('News')">
-        📰 News
-      </div>
-
-      <div class="category" onclick="filterArticles('Sports')">
-        ⚽ Sports
-      </div>
-
-      <div class="category" onclick="filterArticles('Entertainment')">
-        🎬 Entertainment
-      </div>
-
-      <div class="category" onclick="filterArticles('Technology')">
-        📱 Technology
-      </div>
-
-      <div class="category" onclick="showAll()">
-        ⭐ All Posts
-      </div>
-
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">📰 Latest Articles</h2>
-
-    <div class="articles" id="articleList">
-
-      <article class="article" data-category="Trending">
-        <div class="category-name">🔥 Trending</div>
-        <h3>আজকের ট্রেন্ডিং বিষয়গুলো এক নজরে</h3>
-        <p>
-          আজকের আলোচিত ও জনপ্রিয় বিষয়গুলো
-          Hakim Trend-এ সহজভাবে জানুন।
-        </p>
-
-        <div class="article-actions">
-          <button onclick="shareArticle('আজকের ট্রেন্ডিং বিষয়গুলো এক নজরে')">
-            📤 Share
-          </button>
-        </div>
-      </article>
-
-      <article class="article" data-category="News">
-        <div class="category-name">📰 News</div>
-        <h3>আজকের গুরুত্বপূর্ণ খবর</h3>
-        <p>
-          গুরুত্বপূর্ণ খবর ও সাম্প্রতিক বিষয়গুলো
-          নিয়মিত এখানে প্রকাশ করা হবে।
-        </p>
-
-        <div class="article-actions">
-          <button onclick="shareArticle('আজকের গুরুত্বপূর্ণ খবর')">
-            📤 Share
-          </button>
-        </div>
-      </article>
-
-      <article class="article" data-category="Sports">
-        <div class="category-name">⚽ Sports</div>
-        <h3>আজকের খেলাধুলার আপডেট</h3>
-        <p>
-          ক্রিকেট, ফুটবলসহ বিভিন্ন খেলাধুলার
-          গুরুত্বপূর্ণ আপডেট এখানে পাবেন।
-        </p>
-
-        <div class="article-actions">
-          <button onclick="shareArticle('আজকের খেলাধুলার আপডেট')">
-            📤 Share
-          </button>
-        </div>
-      </article>
-
-      <article class="article" data-category="Entertainment">
-        <div class="category-name">🎬 Entertainment</div>
-        <h3>বিনোদনের নতুন খবর</h3>
-        <p>
-          সিনেমা, গান ও বিনোদন জগতের আলোচিত
-          বিষয়গুলো এখানে প্রকাশ করা হবে।
-        </p>
-
-        <div class="article-actions">
-          <button onclick="shareArticle('বিনোদনের নতুন খবর')">
-            📤 Share
-          </button>
-        </div>
-      </article>
-
-      <article class="article" data-category="Technology">
-        <div class="category-name">📱 Technology</div>
-        <h3>প্রযুক্তির নতুন আপডেট</h3>
-        <p>
-          মোবাইল, AI, অ্যাপ ও প্রযুক্তির নতুন
-          খবর জানতে Hakim Trend অনুসরণ করুন।
-        </p>
-
-        <div class="article-actions">
-          <button onclick="shareArticle('প্রযুক্তির নতুন আপডেট')">
-            📤 Share
-          </button>
-        </div>
-      </article>
-
+      <a href="article.html" class="button">
+        আর্টিকেল পড়ুন →
+      </a>
     </div>
 
-    <div class="no-result" id="noResult">
-      কোনো Article পাওয়া যায়নি।
-    </div>
+  </div>
 
-  </section>
-
-</main>
-
-<footer>
-  <p><strong>🔥 Hakim Trend</strong></p>
-  <p>ট্রেন্ডের খবর, সবার আগে</p>
-  <p>© 2026 Hakim Trend</p>
-</footer>
-
-<script>
-
-function showAll() {
-  const articles = document.querySelectorAll(".article");
-
-  articles.forEach(article => {
-    article.style.display = "block";
-  });
-
-  document.getElementById("noResult").style.display = "none";
-  document.getElementById("searchInput").value = "";
-}
-
-function filterArticles(category) {
-
-  const articles = document.querySelectorAll(".article");
-  let found = false;
-
-  articles.forEach(article => {
-
-    if (article.dataset.category === category) {
-      article.style.display = "block";
-      found = true;
-    } else {
-      article.style.display = "none";
-    }
-
-  });
-
-  document.getElementById("noResult").style.display =
-    found ? "none" : "block";
-
-  document.getElementById("searchInput").value = "";
-}
-
-function searchArticles() {
-
-  const search =
-    document.getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
-
-  const articles = document.querySelectorAll(".article");
-  let found = false;
-
-  articles.forEach(article => {
-
-    const text = article.innerText.toLowerCase();
-
-    if (text.includes(search)) {
-      article.style.display = "block";
-      found = true;
-    } else {
-      article.style.display = "none";
-    }
-
-  });
-
-  if (search === "") {
-    showAll();
-    return;
-  }
-
-  document.getElementById("noResult").style.display =
-    found ? "none" : "block";
-}
-
-function shareArticle(title) {
-
-  const url = window.location.href;
-
-  if (navigator.share) {
-
-    navigator.share({
-      title: title,
-      text: "Hakim Trend — " + title,
-      url: url
-    });
-
-  } else {
-
-    alert("এই Article-এর লিংক কপি করে শেয়ার করতে পারেন:\n" + url);
-
-  }
-}
-
-</script>
+  <footer>
+    © 2026 আমাদের ওয়েবসাইট
+  </footer>
 
 </body>
 </html>
