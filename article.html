@@ -4,51 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>নতুন আর্টিকেল</title>
+  <title>আমাদের প্রথম আর্টিকেল</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #222;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
     }
 
     header {
-      background: #111827;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
       color: white;
-      padding: 25px 15px;
       text-align: center;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
     }
 
     .article {
-      max-width: 800px;
-      margin: 25px auto;
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 30px;
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
-    h1 {
+    .article h2 {
+      color: #2563eb;
       margin-top: 0;
-      color: #111827;
+      font-size: 28px;
     }
 
-    p {
-      font-size: 17px;
-      line-height: 1.8;
+    .article p {
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .info {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
     }
 
     .back {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px;
+      margin-top: 15px;
+      padding: 13px 20px;
       background: #2563eb;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 25px;
+      background: #0f172a;
+      color: white;
     }
   </style>
 </head>
@@ -56,25 +82,38 @@
 <body>
 
   <header>
-    <h2>আমাদের ওয়েবসাইট</h2>
+    <h1>📰 আমাদের আর্টিকেল</h1>
   </header>
 
   <div class="article">
-    <h1>স্বাগতম আমাদের নতুন আর্টিকেলে</h1>
+
+    <h2>স্বাগতম আমাদের নতুন আর্টিকেলে 👋</h2>
 
     <p>
-      এটি আমাদের ওয়েবসাইটের একটি সুন্দর আর্টিকেল পেজ।
-      এখানে আপনি বিভিন্ন ধরনের তথ্য, খবর এবং গুরুত্বপূর্ণ
-      বিষয় নিয়ে লেখা প্রকাশ করতে পারবেন।
+      আমাদের ওয়েবসাইটের প্রথম আর্টিকেলে আপনাকে স্বাগতম।
+      এখানে আমরা বিভিন্ন ধরনের তথ্য, খবর এবং গুরুত্বপূর্ণ
+      বিষয় সহজ ভাষায় তুলে ধরব।
     </p>
+
+    <div class="info">
+      💡 <strong>জেনে রাখুন:</strong>
+      নিয়মিত নতুন নতুন আর্টিকেল এই ওয়েবসাইটে প্রকাশ করা হবে।
+    </div>
 
     <p>
-      ভবিষ্যতে এই পেজে ছবি, ভিডিও এবং আরও অনেক নতুন
-      ফিচার যোগ করা যাবে।
+      ভবিষ্যতে এই ওয়েবসাইটে ছবি, ভিডিও, আরও অনেক
+      নতুন আর্টিকেল এবং প্রয়োজনীয় ফিচার যোগ করা হবে।
     </p>
 
-    <a href="index.html" class="back">← হোম পেজে ফিরে যান</a>
+    <a href="index.html" class="back">
+      ← হোম পেজে ফিরে যান
+    </a>
+
   </div>
+
+  <footer>
+    © 2026 আমাদের ওয়েবসাইট | সর্বস্বত্ব সংরক্ষিত
+  </footer>
 
 </body>
 </html>
