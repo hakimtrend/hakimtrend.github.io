@@ -112,7 +112,49 @@
 
 <body>
  <img src="file_00000000ade0820ba41fcc124a3a35a2.png" alt="Hakim Trend Logo" style="width:140px; height:140px; display:block; margin:20px auto;
+<div class="search-box">
+  <input
+    type="text"
+    id="siteSearch"
+    placeholder="🔍 কী জানতে চান?"
+    onkeyup="searchSite()"
+  >
+  <button onclick="searchSite()">সার্চ</button>
+</div>
 
+<style>
+.search-box {
+  display: flex;
+  gap: 8px;
+  max-width: 650px;
+  margin: 15px auto;
+  padding: 0 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+}
+</style>
   <header>
     <h1>আমাদের ওয়েবসাইট 🌐</h1>
     <p>তথ্য, খবর ও সুন্দর আর্টিকেলের একটি সহজ প্ল্যাটফর্ম</p>
