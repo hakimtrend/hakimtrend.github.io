@@ -318,5 +318,42 @@ function searchSite() {
   }
 }
 </script>
+  <script>
+function searchSite() {
+  const search = document.getElementById("siteSearch").value
+    .toLowerCase()
+    .trim();
+
+  const pages = {
+    "মোবাইল": "tips.html",
+    "মোবাইল টিপস": "tips.html",
+    "টিপস": "tips.html",
+    "ট্রিকস": "tips.html",
+    "প্রযুক্তি": "technology.html",
+    "টেক": "technology.html",
+    "ফুটবল": "sports.html",
+    "ক্রিকেট": "sports.html",
+    "খেলা": "sports.html",
+    "ভাইরাল": "viral.html",
+    "আন্তর্জাতিক": "international.html",
+    "বিনোদন": "entertainment.html",
+    "সিনেমা": "entertainment.html",
+    "জ্ঞান": "knowledge.html",
+    "তথ্য": "knowledge.html",
+    "দেশ": "country-news.html",
+    "বাংলাদেশ": "country-news.html",
+    "আয়": "online-income.html",
+    "অনলাইনে আয়": "online-income.html",
+    "ভিডিও": "video-content.html",
+    "আর্টিকেল": "article.html"
+  };
+
+  if (pages[search]) {
+    window.location.href = pages[search];
+  } else if (search !== "") {
+    alert("দুঃখিত! এই বিষয়ে এখনো কোনো পেজ পাওয়া যায়নি।");
+  }
+}
+</script>
 </body>
 </html>
